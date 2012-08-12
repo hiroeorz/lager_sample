@@ -19,9 +19,7 @@
 start() ->
     application:start(compiler),
     application:start(syntax_tools),
-    application:start(lager),
-    lager:set_loglevel(lager_console_backend, debug),
-    lager:set_loglevel(lager_file_backend, debug).    
+    application:start(lager).
 
 %%--------------------------------------------------------------------
 %% @doc
