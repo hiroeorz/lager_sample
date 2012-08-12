@@ -19,7 +19,15 @@
 start() ->
     application:start(compiler),
     application:start(syntax_tools),
+
+    application:start(lager_sample),
+    {ok, [{handlers, LConfig}]} = application:get_env(lager_sample, lager),    
+
+    application:load(lager),
+    application:set_env(lager, handlers, LConfig),
+    application:stop(lager),
     application:start(lager).
+
 
 %%--------------------------------------------------------------------
 %% @doc
