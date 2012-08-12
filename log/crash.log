@@ -1,0 +1,20 @@
+2012-08-12 18:15:45 =ERROR REPORT====
+Error loading driver: dlopen(deps/syslog/priv/syslog_drv.so, 2): Symbol not found: _ei_decode_atom
+  Referenced from: /Users/shin/src/lager_sample/deps/syslog/priv/syslog_drv.so
+  Expected in: flat namespace
+ in /Users/shin/src/lager_sample/deps/syslog/priv/syslog_drv.so2012-08-12 18:15:45 =CRASH REPORT====
+  crasher:
+    initial call: syslog:init/1
+    pid: <0.67.0>
+    registered_name: []
+    exception exit: {bad_driver,[{gen_server,init_it,6,[{file,"gen_server.erl"},{line,320}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,227}]}]}
+    ancestors: [<0.31.0>]
+    messages: []
+    links: []
+    dictionary: []
+    trap_exit: false
+    status: running
+    heap_size: 987
+    stack_size: 24
+    reductions: 179
+  neighbours:
