@@ -25,7 +25,6 @@ start() ->
 
     application:load(lager),
     application:set_env(lager, handlers, LConfig),
-    application:stop(lager),
     application:start(lager).
 
 
